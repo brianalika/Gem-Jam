@@ -1,0 +1,137 @@
+#container-fluid {
+	width: 75%;
+	height: 90%px;
+	padding-left: 25%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+}
+
+body {
+	background-image: url("../images/background.jpg");
+	background-size: 75%;
+	border: solid 2px;
+}
+
+h1 {
+	background-color: yellow;
+	color: white;
+	display:inline;
+	clear: both;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: solid 1px #ddd;
+	border-radius: 30px;
+	font-family: 'Merriweather', serif;
+}
+
+#wrap {
+	width: 100%
+	max-width:960px;
+	margin: 0 auto;
+}
+
+#directions {
+	background-color: gold;
+	text-decoration-color: bold, white;
+	width: 85%; 
+	clear:both;
+	padding-right: auto;
+	padding-left: auto;
+	margin: 2px;
+	border: solid 1px #ddd
+	border-radius: 30px;
+}
+
+#guessField {
+	background-color: green;
+	float: left;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 20px;
+	border-radius :10px;
+}
+
+#score {
+	background-color: #03A9F4;
+	display: inline-block;
+	padding: 15px 20px 10px 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+	border-radius: 25px;
+
+}
+
+#gems {
+	margin-top: 15px;
+	margin-bottom:26px;
+}
+
+.crystalImage {
+	height: 111px;
+	border: solid 1px;
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+.crystalImage:firstchild {
+	margin-left: 0px;
+
+}
+
+#totalScore {
+	margin-bottom: 50px;
+	border-radius: 60px;
+	
+
+}
+
+#yts {
+	background: #009688;
+	display: inline;
+	padding: 20px;
+	border: solid 1px #ddd
+}
+/*Targeting Tablets and desktop*/
+@media only screen and (min-width: 768px){
+	body{
+		background-image:url("../images/background.jpg");
+			width: auto;
+			height: auto;
+			margin: 1px;
+			padding: 10px;
+		}
+	
+/*Targetting phones */
+@media only screen and (max-width: 767px){
+	body{
+		background-image: url("../images/background.jpg");
+			width: auto;
+			height: auto;
+			margin: 1px;
+			padding: 10px;
+	}
+	}
+/*portraint phones*/
+@media only screen(max-width: 767px) and (orientation: portrait){
+	body{
+		background-image: url("../images/background.jpg");
+			width: auto;
+			height: auto;
+			margin: 1px;
+			padding: 10px;
+	
+	}
+	
+.footer {
+	text-align: center;
+	border-top-color: rgb(26, 182, 169);
+	border-top-style: solid;
+	border-top-width: 10px;
+	background-color: rgb(207, 231, 207); 
+	padding: 10px; 
+	clear: both; 
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 110%;
+	}
