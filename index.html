@@ -3,40 +3,33 @@
 <head>
 	<title>Gem Jammin'</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<!-- Minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<!-- Latest Compiled and Minified JavaScript -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	
 </head>
 
 <body>
-	<div id="container-fluid">
-	<div id = "wrap">
-		<h1><span><strong>Gem Jammin'!</STRONG></STRONG><span></h1>
-		<div id="directions">
-			<h4>Directions:</h4>
-			<p> At the start of the game, you will be given a random target number of gems to mine.</p>
-			<p> Below, there are four gems. By clicking on a gem, you will be awarded a specific number of points.</p>
-			<p> In order to win, you much match the number of gems you've collected with the target number. Be careful! The cave will collapse if you go above the target number, and you'll lose that round.</p>
-			<p> Each time the game restarts, a new value will be given to each gem.</p>
-		</div>
-		<div class = "container">
-			<div id="guessField">
-				<h2>Number to Guess: <span class="value"></span></h2> 	
+
+	<div class="container-fluid" id="content">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<img src="assets/images/gemjambanner.png" alt="Gem Jammin Banner" id="banner">   
 			</div>
-			<div id="score">
-				<h3><span id="status"></span></h3>
-				<h3>Wins: <span id="win"></span></h3>
-				<h3>Losses: <span id="loss"></span> </h3>
+			<div class="col-md-1"></div>
+			<div class="col-md-6">
+				<p id="directions">DIRECTIONS: Below, there are four gems. By clicking on a gem, you will be awarded a specific number of points. In order to win, you much match the number of gems you've collected with the target number. Be careful! The cave will collapse if you go above the target number, and you'll lose that round. Each time the game restarts, a new value will be given to each gem.</p>
+				<br>
+				<div id="guessField"><h2>Target Number: <span class="value"></span></h2></div>
+				<div id="score">
+					<h3><span id="status"></span></h3>
+					<h3>Wins: <span id="win"></span></h3>
+					<h3>Losses: <span id="loss"></span> </h3>
+				</div>
+				<br>
+				<div id="gems"></div>
+				<br>
+				<div id ="totalScore"><h2 id = "yts">Current Total: <span id ="yourScore">0</span></h2></div>
 			</div>
-		</div>
-		<div id="gems"></div>
-		<div id ="totalScore">
-			<h2 id = "yts">Your Total Score is: <span id ="yourScore">0</span></h2>
 		</div>
 	</div>
 	
@@ -49,7 +42,6 @@
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="assets/javascript/game.js"></script>
 	</div>
-
 
 </body>
 </html>
