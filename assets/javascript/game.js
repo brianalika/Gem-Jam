@@ -1,3 +1,4 @@
+// Document refers to the html document. When it is ready, call on this function.
 $(document).ready(function() {
     //Global Variables
         gems = ['assets/images/red.png','assets/images/blue.png','assets/images/yellow.png','assets/images/green.png'];
@@ -9,12 +10,14 @@ $(document).ready(function() {
         $('#win').text(wins);
         $('#loss').text(losses);
         
+        // We are calling a function before it exists. You cannot do that in most other languages. NOTE: Research "You Don't Know JS"
         newGems();
         newGame();
         function newGems () {
             var numbers = []
+                // Use a while loop when you don't know how many times you will loop through an array
                 while(numbers.length < 4){
-                    //Math.ceil will round to an integer. The if statement will create a random number. Thi is the winning number if the user guesses correctly.
+                    //Math.ceil will round up to an integer. The if statement will create a random number. Thi is the winning number if the user guesses correctly.
                   var randomNumber = Math.ceil(Math.random()*12)
                   var found = false;
                   for (var i=0; i< numbers.length; i++){
@@ -24,13 +27,14 @@ $(document).ready(function() {
                   }
                   if(!found)numbers[numbers.length]=randomNumber;
                 }
-            //console.log(newGems);		
+            //Below, we are adding attributes and a call to the image tag. 	
             for (i = 0; i < numbers.length; i++) {
                 var imageCrystal = $('<img>');
                 imageCrystal.attr('data-num', numbers[i]);
                 imageCrystal.attr('src', gems[i]);
                 imageCrystal.attr('alt', 'gems');
                 imageCrystal.addClass('crystalImage')
+                // We are then going to append image to the gems ID.
                 $('#gems').append(imageCrystal);
             }
         }
@@ -58,7 +62,7 @@ $(document).ready(function() {
                   $('#status').text('You won!!!!');
                   wins ++;
                   $('#win').text(wins);
-                  console.log(wins)
+                    // console.log(wins)
                   $('#gems').empty();
                   newGems();
                   newGame();
@@ -67,7 +71,7 @@ $(document).ready(function() {
                     $('#status').text('You lost!');
                     losses ++;
                     $('#loss').text(losses);
-                    console.log(losses)
+                    // console.log(losses)
                     $('#gems').empty();
                     newGems();
                     newGame();
